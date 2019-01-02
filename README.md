@@ -23,7 +23,9 @@ ground:	 Total killed on the ground
 summary:	 Brief description of the accident and cause if known
 ```
 
-f.write("date,time,location,operator,flight_no,route,ac_type,registration,cn_ln,aboard,fatalities,ground,summary\n")
+Since the information about aboard/fatalities is a string. It's parsed and they have their own columns to easily fetch specific data e.g. "how many passengers died in this crash".
+
+f.write("date,time,location,operator,flight_no,route,ac_type,registration,cn_ln,all_aboard,passengers_aboard, crew_aboard,all_fatalities, passenger_fatalities, crew_fatalities,ground,summary\n")
 
 ## Prerequisites
 ```
